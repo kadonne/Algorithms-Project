@@ -17,7 +17,7 @@ def binary_search(arr, low, high, x):
 	return -1
 
 
-def symbols_digits(word_list,hash_list):
+def symbols_digits(word_list,hash_list,digits,symbols):
 	hashed = {}
 	for word in word_list:
 		word = word.strip()
@@ -27,6 +27,7 @@ def symbols_digits(word_list,hash_list):
 				hashed_word = hashlib.sha256(('4621_ctf{%s%s%s}2546120'%(word,symbols[i],digits[j])).encode()).hexdigest() 
 				#store original password to password
 				password = '%s%s%s'%(word,symbols[i],digits[j])
+				print(hashed_word)
 				#store the hash into hashed dictionary as the key and password as the value
 				hashed[hashed_word] = password
 				# every time 20 million words are computed, compare the hashes and reset the hashed dictionary to save up RAM
@@ -36,7 +37,7 @@ def symbols_digits(word_list,hash_list):
 	# compare remaining combinations in case hashed dictionary's length > 0 and < 20million
 	compare_hashes(hashed,hash_list)
 
-def digits_symbols(word_list,queue):
+def digits_symbols(word_list,queue,digits,symbols):
 	hashed = {}
 	for word in word_list:
 		word = word.strip()
@@ -46,6 +47,7 @@ def digits_symbols(word_list,queue):
 				hashed_word = hashlib.sha256(('4621_ctf{%s%s%s}2546120'%(word,digits[j],symbols[i])).encode()).hexdigest() 
 				#store original password to password
 				password = '%s%s%s'%(word,digits[j],symbols[i])
+				print(hashed_word)
 				#store the hash into hashed dictionary as the key and password as the value
 				hashed[hashed_word] = password
 				# every time 20 million words are computed, compare the hashes and reset the hashed dictionary to save up RAM
@@ -85,7 +87,7 @@ if __name__ == "__main__":
 	symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
 	digits = ['0','1','2','3','4','5','6','7','8','9']
 	
-	hash_file = open('../HASHES/Hashes1.txt','r')
+	hash_file = open('Hashes.txt','r')
 
 	#append every word in the Hashes.txt (100 hashed passwords that were given)
 	hash_list = list()
@@ -93,14 +95,14 @@ if __name__ == "__main__":
 		hash_list.append(word.strip())
 	hash_file.close()
 
-	file1 = open('../TEXT/lowercased1.txt','r')
+	file1 = open('lowercased.txt','r')
 	# store all lines full of LEET SPEAK combinations that were converted from the original wordlist full of 140,000 english words with length greater than 10
 	word_list = file1.readlines()
 	file1.close()
 		
 	#process dedicated to appending symbols followed by digits
-	multiprocessing.Process(target=symbols_digits,args=(word_list,hash_list)).start()
+	multiprocessing.Process(target=symbols_digits,args=(word_list,hash_list,digits,symbols)).start()
 	#process dedicated to appending digits followed by symbols
-	multiprocessing.Process(target=digits_symbols,args=(word_list,hash_list)).start()
+	multiprocessing.Process(target=digits_symbols,args=(word_list,hash_list,digits,symbols)).start()
 
 	print('done')

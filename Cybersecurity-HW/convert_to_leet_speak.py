@@ -25,7 +25,7 @@ def do_combinations(string, target, symbol):
 	
 symbols = {'s':'$', 'a': '4', 'l': '1', 'e': '3', 't': '7', 'i': '1', 'o': '0', 'b': '8', 'g': '9'}
 for item in symbols:
-	f = open('letters.txt','r')
+	f = open('lowercased.txt','r')
 	list_of_words = f.readlines()
 	f.close()
 	for word in list_of_words:
