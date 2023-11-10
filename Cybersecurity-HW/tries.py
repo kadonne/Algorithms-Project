@@ -2,7 +2,7 @@ class TrieNode: #definition of TrieNode
     def __init__(self):
         self.children = {} #dictionary containing this nodes children
         self.is_end = False #if true, this hash is "in" our tree
-        self.values = [] #list to store values associated with this node
+        self.values = [] #the actual value contained in the node, in our case the Char
 
 class Trie:
     def __init__(self):
@@ -15,20 +15,23 @@ class Trie:
                 node.children[char] = TrieNode() #new node! 
             node = node.children[char] # else, its in the Trie, we call that our new root, continue the loop
         node.is_end = True #once were here, its the end of the Hash. Mark it true
-        node.values.append(value) #add the character to this nodes values list
+        node.values.append(value) #value stored here will be path to get here
 
     def search(self, value):
-        #starting at root of the Trie
-        node = self.root 
-        for char in value:
+        node = self.root
+        for char in value: #for every char on input value
             if char not in node.children:
-                #If the current Char is not in the children of current node
-                #the hash is not in the Trie
-                return None
-            node = node.children[char]
-        #Loop is finished, node now points to last character in the search hash
-        #return the values list associated with this node.
-        result = str(node.values)[1:-1]
-        return print(result)
+                return None #if were here, the input value can't be in trie, return None
+            node = node.children[char] # if found, move down the tree 
+        return node.values 
+    
+    def print_search(self, value):
+
+        #do a search for the hash
+        result = self.search(value)
+
+        if result: #if we have a result
+            result = str(result)[1:-1] #remove brackets
+            print(result) 
 
     
