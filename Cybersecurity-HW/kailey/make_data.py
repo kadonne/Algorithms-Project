@@ -1,8 +1,15 @@
 import hashlib
 import random
 import math
+import sys
 def main():
-    sample_size = 500
+    sample_size = 0
+    try:
+        sample_size = int(sys.argv[1])
+    except Exception:
+        print('Usage: python make_data.py <sample_size>\nExpected int in command-line arguements.')
+        quit()
+
     size_factor = 5
     symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
     digits = ['0','1','2','3','4','5','6','7','8','9']
