@@ -21,7 +21,7 @@ def main():
     for i in line_numbers:
         clear_text_sd = words[random.randint(i,i+math.floor(sample_size/size_factor))] + symbols[random.randint(0,len(symbols)-1)] + digits[random.randint(0,len(digits)-1)]
         clear_text_ds = words[random.randint(i,i+math.floor(sample_size/size_factor))] + digits[random.randint(0,len(digits)-1)] + symbols[random.randint(0,len(symbols)-1)] 
-        password_file.write(encrypt_string(clear_text_sd)+' '+clear_text_sd+'\n'+encrypt_string(clear_text_ds)+' '+clear_text_ds+'\n')
+        password_file.write(encrypt_string(clear_text_sd)+'\n'+encrypt_string(clear_text_ds)+'\n')
         print(clear_text_sd)
         print(clear_text_ds)
 
