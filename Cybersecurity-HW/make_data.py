@@ -2,8 +2,8 @@ import hashlib
 import random
 import math
 def main():
-    sample_size = 500
-    size_factor = 5
+    sample_size = 5255
+    size_factor = 20
     symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
     digits = ['0','1','2','3','4','5','6','7','8','9']
 
