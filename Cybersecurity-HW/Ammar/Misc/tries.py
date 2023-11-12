@@ -1,37 +1,35 @@
-class TrieNode: #definition of TrieNode
+class TrieNode: #definition for the TrieNode itself
     def __init__(self):
-        self.children = {} #dictionary containing this nodes children
-        self.is_end = False #if true, this hash is "in" our tree
-        self.values = [] #the actual value contained in the node, in our case the Char
+        self.children = {} #keeps track of this nodes children
+        self.is_end = False #indicates if value is in Trie
+        self.values = list() #actual val of each node, this is equal to the char in our case
 
-class Trie:
+class Trie: #definition of Trie structure, consisting of TrieNodes. Starting with rootNode
     def __init__(self):
-        self.root = TrieNode() #Trie Tree definition, starting with the root
-    
-    def insert(self, value):
-        node = self.root 
-        for char in value: #for each character in our encoded Hash
-            if char not in node.children: # if the char is not already a child of current 
-                node.children[char] = TrieNode() #new node! 
-            node = node.children[char] # else, its in the Trie, we call that our new root, continue the loop
-        node.is_end = True #once were here, its the end of the Hash. Mark it true
-        node.values.append(value) #value stored here will be path to get here
+        self.root = TrieNode()
 
-    def search(self, value):
+    def insert(self,value):
         node = self.root
-        for char in value: #for every char on input value
+        for char in value:
+            if char not in node.children: #if node is not in the child nodes
+                node.children[char] = TrieNode() #make new node
+            node = node.children[char]#else, it is in our trie already
+            node.is_end = True
+            node.values.append(value)
+    
+    def search(self,value):
+        node = self.root
+        for char in value:
             if char not in node.children:
-                return None #if were here, the input value can't be in trie, return None
-            node = node.children[char] # if found, move down the tree 
-        return node.values 
-    
-    def print_search(self, value):
+                return None #not found
+            node = node.children[char] #move down tree when we find the char
+        return node.values #returns bottom child, which will have vals of our whole hash!
 
-        #do a search for the hash
-        result = self.search(value)
+    def _print_values(self, node, prefix):
+        if node.is_end:
+            print(prefix)
+        for char, child_node in node.children.items():
+            self._print_values(child_node, prefix + char)
 
-        if result: #if we have a result
-            result = str(result)[1:-1] #remove brackets
-            print(result) 
-
-    
+    def print_values(self):
+        self._print_values(self.root,'')

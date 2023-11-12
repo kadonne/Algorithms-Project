@@ -3,6 +3,8 @@ from self_balancing_tree import SelfBalancingTree
 import time
 
 def symbols_digits(word_list,hash_list,digits,symbols):
+	global t
+	t0 = time.time()
 	tree = SelfBalancingTree()
 	for word in word_list:
 		word = word.strip()
@@ -13,9 +15,12 @@ def symbols_digits(word_list,hash_list,digits,symbols):
 				#store original password to password
 				password = '%s%s%s'%(word,symbols[i],digits[j])
 				tree.insert_key(hashed_word, password)
+	t[0] = t[0]+time.time()-t0
 	compare_hashes(tree, hash_list)
 
 def digits_symbols(word_list,hash_list,digits,symbols):
+	global t
+	t0 = time.time()
 	tree = SelfBalancingTree()
 	for word in word_list:
 		word = word.strip()
@@ -26,10 +31,13 @@ def digits_symbols(word_list,hash_list,digits,symbols):
 				#store original password to password
 				password = '%s%s%s'%(word,digits[j],symbols[i])
 				tree.insert_key(hashed_word, password)
+	t[0] = t[0]+time.time()-t0
 	compare_hashes(tree, hash_list)
 
 def compare_hashes(tree, hash_list):
+	global t
 	global decrypted_passwords
+	t0 = time.time()
 
 	for word in hash_list:
 		hashes_word = tree.search_key(word)
@@ -39,10 +47,12 @@ def compare_hashes(tree, hash_list):
 	for i in decrypted_passwords:
 		if i in hash_list:
 			hash_list.remove(i)
+	t[1] = t[1]+time.time()-t0
 
 				
 if __name__=='__main__':
 	decrypted_passwords = {}
+	t = [0,0,0]
 
 	symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
 	digits = ['0','1','2','3','4','5','6','7','8','9']
@@ -65,12 +75,14 @@ file1.close()
 t0 = time.time()
 symbols_digits(word_list,hash_list,digits,symbols)
 digits_symbols(word_list,hash_list,digits,symbols)
-t1 = time.time()
+t[2] = t[2]+time.time()-t0
 
 write_file = open('decrypted_passwords.txt','w')
 for i in decrypted_passwords: 
 	write_file.writelines(i + ' ' + decrypted_passwords[i]+'\n')
 write_file.close()
 
-print('done')
-print('Total time: %fs'%(t1-t0))
+#print('done')
+print('Insert time:\t%fs'%(t[0]))
+print('Search time:\t%fs'%(t[1]))
+#print('Total time:\t%fs'%(t[2]))

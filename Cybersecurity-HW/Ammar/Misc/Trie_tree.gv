@@ -1,0 +1,4 @@
+// Trie graph
+digraph {
+	a -> b
+}

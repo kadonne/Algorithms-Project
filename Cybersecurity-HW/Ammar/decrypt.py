@@ -16,6 +16,8 @@ def binary_search(arr, low, high, x):
 
 
 def symbols_digits(word_list,hash_list,digits,symbols):
+	global t
+	t0 = time.time()
 	hashed = {}
 	for word in word_list:
 		word = word.strip()
@@ -31,10 +33,13 @@ def symbols_digits(word_list,hash_list,digits,symbols):
 				if(len(hashed) >= 20000000):
 					compare_hashes(hashed,hash_list)
 					hashed = {}
+	t[0] = t[0]+time.time()-t0
 	# compare remaining combinations in case hashed dictionary's length > 0 and < 20million
 	compare_hashes(hashed,hash_list)
 
 def digits_symbols(word_list,hash_list,digits,symbols):
+	global t
+	t0 = time.time()
 	hashed = {}
 	for word in word_list:
 		word = word.strip()
@@ -50,17 +55,23 @@ def digits_symbols(word_list,hash_list,digits,symbols):
 				if(len(hashed) >= 20000000):
 					compare_hashes(hashed,hash_list)
 					hashed = {}
+	t[0] = t[0]+time.time()-t0
+	
 	# compare remaining combinations in case hashed dictionary's length > 0 and < 20million
 	compare_hashes(hashed,hash_list)
 
 def compare_hashes(hashed,hash_list):
+	global t
 	global decrypted_passwords 
 
+	t0 = time.time()
 	# sort the computed hashed dictionary from digit_symbol and symbol_digit functions
 	sorted_hashed = sorted(hashed.items(), key=lambda x:x[0])
+	t[2] = t[2]+time.time()-t0
 	# flatten the dictionary so all the keys are stored into a 1D array
 	keys = [r[0] for r in sorted_hashed]
 
+	t0 = time.time()
 	for word in hash_list:
 		try:
 			# take each hash in hash_list (Hashes1.txt, 100 hashes) and see if it's in one of the 20million hashes inside hashed dictionary
@@ -73,12 +84,15 @@ def compare_hashes(hashed,hash_list):
 		# if one of the 100 hashes is present in the dictionary, write to passwords1.txt along with the original password
 		if found:
 			decrypted_passwords[hashes_word[0]] = hashes_word[1]+'\n'
+	t[1] = t[1]+time.time()-t0
+	
 	for i in decrypted_passwords:
 		if i in hash_list:
 			hash_list.remove(i)
 
 if __name__=='__main__':
 	decrypted_passwords = {}
+	t = [0,0,0,0]
 
 	symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
 	digits = ['0','1','2','3','4','5','6','7','8','9']
@@ -98,13 +112,16 @@ if __name__=='__main__':
 	t0 = time.time()
 	symbols_digits(word_list,hash_list,digits,symbols)
 	digits_symbols(word_list,hash_list,digits,symbols)
-	t1 = time.time()
 
 	write_file = open('decrypted_passwords.txt','w')
 
 	for i in decrypted_passwords: write_file.writelines(i + ' ' + decrypted_passwords[i])
 	write_file.close()
+	t[3] = time.time()-t0
 
 
-	print('done')
-	print('Total time: %fs'%(t1-t0))
+	#print('done')
+	print('Insert time:\t%fs'%(t[0]))
+	print('Search time:\t%fs'%(t[1]))
+	print('Sort time:\t%fs'%(t[2]))
+	#print('Total time:\t%fs'%(t[2]))

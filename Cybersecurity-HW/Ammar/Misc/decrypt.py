@@ -4,7 +4,6 @@ import time
 from itertools import product
 
 def binary_search(arr, low, high, x):
-
 	if high >= low:
 		mid = (high + low) // 2
 	
@@ -101,10 +100,6 @@ if __name__=='__main__':
 	file1.close()
 	symbols_digits(word_list,hash_list,digits,symbols)
 	digits_symbols(word_list,hash_list,digits,symbols)
-	#process dedicated to appending symbols followed by digits
-	#multiprocessing.Process(target=symbols_digits,args=(word_list,hash_list,digits,symbols)).start()
-	#process dedicated to appending digits followed by symbols
-	#multiprocessing.Process(target=digits_symbols,args=(word_list,hash_list,digits,symbols)).start()
 
 	write_file = open('decrypted_passwords.txt','w')
 	write_file.writelines(decrypted_passwords)
