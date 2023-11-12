@@ -1,0 +1,104 @@
+Insert time:	0.128651s
+Search time:	0.000000s
+Sort time:	0.035683s
+Dictionary: 250
+Insert time:	0.263232s
+Search time:	0.000000s
+Sort time:	0.093750s
+Dictionary: 500
+Insert time:	0.441267s
+Search time:	0.000000s
+Sort time:	0.152058s
+Dictionary: 750
+Insert time:	0.586672s
+Search time:	0.000000s
+Sort time:	0.200506s
+Dictionary: 1000
+Insert time:	0.819476s
+Search time:	0.000000s
+Sort time:	0.233891s
+Dictionary: 1250
+Insert time:	0.837253s
+Search time:	0.000000s
+Sort time:	0.333206s
+Dictionary: 1500
+Insert time:	1.059455s
+Search time:	0.000000s
+Sort time:	0.353345s
+Dictionary: 1750
+Insert time:	1.100872s
+Search time:	0.000000s
+Sort time:	0.426635s
+Dictionary: 2000
+Insert time:	1.281871s
+Search time:	0.000000s
+Sort time:	0.543097s
+Dictionary: 2250
+Insert time:	1.471938s
+Search time:	0.000000s
+Sort time:	0.578401s
+Dictionary: 2500
+Insert time:	1.758142s
+Search time:	0.000000s
+Sort time:	0.763962s
+Dictionary: 2750
+Insert time:	2.196168s
+Search time:	0.000000s
+Sort time:	0.755378s
+Dictionary: 3000
+Insert time:	1.900578s
+Search time:	0.000000s
+Sort time:	0.724844s
+Dictionary: 3250
+Insert time:	2.081397s
+Search time:	0.000000s
+Sort time:	0.714151s
+Dictionary: 3500
+Insert time:	2.313930s
+Search time:	0.000000s
+Sort time:	1.078285s
+Dictionary: 3750
+Insert time:	2.497348s
+Search time:	0.000000s
+Sort time:	0.975125s
+Dictionary: 4000
+Insert time:	2.628753s
+Search time:	0.000000s
+Sort time:	1.067029s
+Dictionary: 4250
+Insert time:	2.766286s
+Search time:	0.000000s
+Sort time:	1.089039s
+Dictionary: 4500
+Insert time:	2.934267s
+Search time:	0.000000s
+Sort time:	1.223392s
+Dictionary: 4750
+Insert time:	3.311849s
+Search time:	0.000000s
+Sort time:	1.288009s
+Dictionary: 5000
+Insert time:	1.256533s
+Search time:	0.000000s
+Self-Balancing-Tree: 250
+Insert time:	2.935415s
+Search time:	0.001002s
+Self-Balancing-Tree: 500
+Insert time:	4.719773s
+Search time:	0.000000s
+Self-Balancing-Tree: 750
+Insert time:	6.357619s
+Search time:	0.000000s
+Self-Balancing-Tree: 1000
+Insert time:	7.590867s
+Search time:	0.000000s
+Self-Balancing-Tree: 1250
+Insert time:	9.814592s
+Search time:	0.000000s
+Self-Balancing-Tree: 1500
+Insert time:	13.102358s
+Search time:	0.000000s
+Self-Balancing-Tree: 1750
+Insert time:	13.503769s
+Search time:	0.000000s
+Self-Balancing-Tree: 2000

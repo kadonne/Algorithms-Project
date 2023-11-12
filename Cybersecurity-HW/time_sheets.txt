@@ -102,3 +102,105 @@ Self-Balancing-Tree: 1750
 Insert time:	13.503769s
 Search time:	0.000000s
 Self-Balancing-Tree: 2000
+Insert time:	17.342329s
+Search time:	0.000000s
+Self-Balancing-Tree: 2250
+Insert time:	24.451498s
+Search time:	0.000000s
+Self-Balancing-Tree: 2500
+Insert time:	29.502859s
+Search time:	0.000000s
+Self-Balancing-Tree: 2750
+Insert time:	29.780290s
+Search time:	0.000000s
+Self-Balancing-Tree: 3000
+Insert time:	26.772583s
+Search time:	0.000000s
+Self-Balancing-Tree: 3250
+Insert time:	30.861826s
+Search time:	0.000000s
+Self-Balancing-Tree: 3500
+Insert time:	32.456290s
+Search time:	0.000000s
+Self-Balancing-Tree: 3750
+Insert time:	32.279304s
+Search time:	0.001006s
+Self-Balancing-Tree: 4000
+Insert time:	32.361672s
+Search time:	0.000000s
+Self-Balancing-Tree: 4250
+Insert time:	33.935996s
+Search time:	0.000000s
+Self-Balancing-Tree: 4500
+Insert time:	43.556518s
+Search time:	0.000000s
+Self-Balancing-Tree: 4750
+Insert time:	38.221915s
+Search time:	0.000000s
+Self-Balancing-Tree: 5000
+Insert time:	7.895395s
+Search time:	0.000000s
+Trie-Tree: 250
+Insert time:	15.587555s
+Search time:	0.000000s
+Trie-Tree: 500
+Insert time:	23.376816s
+Search time:	0.000000s
+Trie-Tree: 750
+Insert time:	32.982113s
+Search time:	0.000000s
+Trie-Tree: 1000
+Insert time:	39.021840s
+Search time:	0.000000s
+Trie-Tree: 1250
+Insert time:	42.607647s
+Search time:	0.000000s
+Trie-Tree: 1500
+Insert time:	52.649652s
+Search time:	0.000000s
+Trie-Tree: 1750
+Insert time:	62.725207s
+Search time:	0.000000s
+Trie-Tree: 2000
+Insert time:	75.440847s
+Search time:	0.000000s
+Trie-Tree: 2250
+Insert time:	150.223441s
+Search time:	0.015625s
+Trie-Tree: 2500
+Insert time:	218.665352s
+Search time:	0.000000s
+Trie-Tree: 2750
+Insert time:	213.424192s
+Search time:	0.015753s
+Trie-Tree: 3000
+Insert time:	150.679729s
+Search time:	0.000000s
+Trie-Tree: 3250
+Insert time:	667.689420s
+Search time:	0.031286s
+Trie-Tree: 3500
+Insert time:	1087.228234s
+Search time:	0.026613s
+Trie-Tree: 3750
+Insert time:	3345.654274s
+Search time:	0.026613s
+Trie-Tree: 4000
+Insert time:	2653.725676s
+Search time:	0.047016s
+Trie-Tree: 4250
+Insert time:	3287.260449s
+Search time:	0.031333s
+Trie-Tree: 4500
+Insert time:	32.106187s
+Search time:	0.000000s
+Trie-Tree: 1000
+Insert time:	63.156191s
+Search time:	0.000000s
+Trie-Tree: 2000
+Insert time:	274.168854s
+Search time:	0.006180s
+Trie-Tree: 3000
+Insert time:	3585.483432s
+Search time:	0.031250s
+Trie-Tree: 4000
