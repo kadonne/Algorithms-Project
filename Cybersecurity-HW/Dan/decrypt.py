@@ -1,6 +1,21 @@
 import hashlib
 from tries import Trie
 import time
+import sys
+
+def hash_it(hash_function, password):
+	if hash_function == 32:
+		return str(hashlib.md5(password.encode()).hexdigest())
+	elif hash_function == 40:
+		return str(hashlib.sha1(password.encode()).hexdigest())
+	elif hash_function == 56:
+		return str(hashlib.sha224(password.encode()).hexdigest())
+	elif hash_function == 64:
+		return str(hashlib.sha256(password.encode()).hexdigest())
+	elif hash_function == 96:
+		return str(hashlib.sha384(password.encode()).hexdigest())
+	return ''
+
 
 def symbols_digits(word_list,hash_list,digits,symbols):
 	global t
@@ -12,9 +27,8 @@ def symbols_digits(word_list,hash_list,digits,symbols):
 		for i in range(0,len(symbols)):
 			for j in range(0,len(digits)):
 				#for every word read from word_list, convert to hash using sha256 and store to hashed_word
-				hashed_word = hashlib.sha256(('%s%s%s'%(word,symbols[i],digits[j])).encode()).hexdigest() 
-				#store original password to password
 				password = '%s%s%s'%(word,symbols[i],digits[j])
+				hashed_word = hash_it(int(sys.argv[1]), password)
 				tree.insert(hashed_word, password)
 	t[0] = t[0]+time.time()-t0
 
@@ -29,9 +43,8 @@ def digits_symbols(word_list,hash_list,digits,symbols):
 		for i in range(0,len(symbols)):
 			for j in range(0,len(digits)):
 				#for every word read from word_list, convert to hash using sha256 and store to hashed_word
-				hashed_word = hashlib.sha256(('%s%s%s'%(word,digits[j],symbols[i])).encode()).hexdigest() 
-				#store original password to password
-				password = '%s%s%s'%(word,digits[j],symbols[i])
+				password = '%s%s%s'%(word,symbols[i],digits[j])
+				hashed_word = hash_it(int(sys.argv[1]), password)
 				tree.insert(hashed_word, password)
 	t[0] = t[0]+time.time()-t0
 	compare_hashes(tree, hash_list)

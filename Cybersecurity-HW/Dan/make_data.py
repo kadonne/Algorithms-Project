@@ -4,13 +4,16 @@ import math
 import sys
 def main():
     sample_size = 0
+    size_factor = 0
+    hash_function = 0
     try:
-        sample_size = int(sys.argv[1])
+        sample_size = int(sys.argv[1]) 
+        size_factor = int(sys.argv[2])
+        hash_function = int(sys.argv[3])
     except Exception:
-        print('Usage: python make_data.py <sample_size>\nExpected int in command-line arguements.')
+        print('Usage: python make_data.py <sample_size>, <size_factor>, <hash_function>\nExpected int in command-line arguements.')
         quit()
 
-    size_factor = 5
     symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
     digits = ['0','1','2','3','4','5','6','7','8','9']
 
@@ -32,7 +35,7 @@ def main():
         if length>len(words): length = len(words)
         clear_text_sd = words[random.randint(i,length)] + symbols[random.randint(0,len(symbols)-1)] + digits[random.randint(0,len(digits)-1)]
         clear_text_ds = words[random.randint(i,length)] + digits[random.randint(0,len(digits)-1)] + symbols[random.randint(0,len(symbols)-1)] 
-        password_file.write(encrypt_string(clear_text_sd)+'\n'+encrypt_string(clear_text_ds)+'\n')
+        password_file.write(encrypt_string(clear_text_sd,hash_function)+'\n'+encrypt_string(clear_text_ds,hash_function)+'\n')
         #print(clear_text_sd)
         #print(clear_text_ds)
 
@@ -40,10 +43,17 @@ def main():
     write_file.close()
     password_file.close()
 
-def encrypt_string(hash_string):
-    sha_signature = hashlib.sha256(hash_string.encode()).hexdigest()
-    return sha_signature
-
-
+def encrypt_string(password, hash_function):
+    if hash_function == 32:
+        return str(hashlib.md5(password.encode()).hexdigest())
+    elif hash_function == 40:
+        return str(hashlib.sha1(password.encode()).hexdigest())
+    elif hash_function == 56:
+        return str(hashlib.sha224(password.encode()).hexdigest())
+    elif hash_function == 64:
+        return str(hashlib.sha256(password.encode()).hexdigest())
+    elif hash_function == 96:
+        return str(hashlib.sha384(password.encode()).hexdigest())
+    return ''
 
 main()

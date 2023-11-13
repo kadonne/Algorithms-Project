@@ -1,0 +1,209 @@
+Insert time:	0.128651s
+Search time:	0.000000s
+Sort time:	0.035683s
+Dictionary: 250
+Insert time:	0.263232s
+Search time:	0.000000s
+Sort time:	0.093750s
+Dictionary: 500
+Insert time:	0.441267s
+Search time:	0.000000s
+Sort time:	0.152058s
+Dictionary: 750
+Insert time:	0.586672s
+Search time:	0.000000s
+Sort time:	0.200506s
+Dictionary: 1000
+Insert time:	0.819476s
+Search time:	0.000000s
+Sort time:	0.233891s
+Dictionary: 1250
+Insert time:	0.837253s
+Search time:	0.000000s
+Sort time:	0.333206s
+Dictionary: 1500
+Insert time:	1.059455s
+Search time:	0.000000s
+Sort time:	0.353345s
+Dictionary: 1750
+Insert time:	1.100872s
+Search time:	0.000000s
+Sort time:	0.426635s
+Dictionary: 2000
+Insert time:	1.281871s
+Search time:	0.000000s
+Sort time:	0.543097s
+Dictionary: 2250
+Insert time:	1.471938s
+Search time:	0.000000s
+Sort time:	0.578401s
+Dictionary: 2500
+Insert time:	1.758142s
+Search time:	0.000000s
+Sort time:	0.763962s
+Dictionary: 2750
+Insert time:	2.196168s
+Search time:	0.000000s
+Sort time:	0.755378s
+Dictionary: 3000
+Insert time:	1.900578s
+Search time:	0.000000s
+Sort time:	0.724844s
+Dictionary: 3250
+Insert time:	2.081397s
+Search time:	0.000000s
+Sort time:	0.714151s
+Dictionary: 3500
+Insert time:	2.313930s
+Search time:	0.000000s
+Sort time:	1.078285s
+Dictionary: 3750
+Insert time:	2.497348s
+Search time:	0.000000s
+Sort time:	0.975125s
+Dictionary: 4000
+Insert time:	2.628753s
+Search time:	0.000000s
+Sort time:	1.067029s
+Dictionary: 4250
+Insert time:	2.766286s
+Search time:	0.000000s
+Sort time:	1.089039s
+Dictionary: 4500
+Insert time:	2.934267s
+Search time:	0.000000s
+Sort time:	1.223392s
+Dictionary: 4750
+Insert time:	3.311849s
+Search time:	0.000000s
+Sort time:	1.288009s
+Dictionary: 5000
+Insert time:	1.256533s
+Search time:	0.000000s
+Self-Balancing-Tree: 250
+Insert time:	2.935415s
+Search time:	0.001002s
+Self-Balancing-Tree: 500
+Insert time:	4.719773s
+Search time:	0.000000s
+Self-Balancing-Tree: 750
+Insert time:	6.357619s
+Search time:	0.000000s
+Self-Balancing-Tree: 1000
+Insert time:	7.590867s
+Search time:	0.000000s
+Self-Balancing-Tree: 1250
+Insert time:	9.814592s
+Search time:	0.000000s
+Self-Balancing-Tree: 1500
+Insert time:	13.102358s
+Search time:	0.000000s
+Self-Balancing-Tree: 1750
+Insert time:	13.503769s
+Search time:	0.000000s
+Self-Balancing-Tree: 2000
+Insert time:	17.342329s
+Search time:	0.000000s
+Self-Balancing-Tree: 2250
+Insert time:	24.451498s
+Search time:	0.000000s
+Self-Balancing-Tree: 2500
+Insert time:	29.502859s
+Search time:	0.000000s
+Self-Balancing-Tree: 2750
+Insert time:	29.780290s
+Search time:	0.000000s
+Self-Balancing-Tree: 3000
+Insert time:	26.772583s
+Search time:	0.000000s
+Self-Balancing-Tree: 3250
+Insert time:	30.861826s
+Search time:	0.000000s
+Self-Balancing-Tree: 3500
+Insert time:	32.456290s
+Search time:	0.000000s
+Self-Balancing-Tree: 3750
+Insert time:	32.279304s
+Search time:	0.001006s
+Self-Balancing-Tree: 4000
+Insert time:	32.361672s
+Search time:	0.000000s
+Self-Balancing-Tree: 4250
+Insert time:	33.935996s
+Search time:	0.000000s
+Self-Balancing-Tree: 4500
+Insert time:	43.556518s
+Search time:	0.000000s
+Self-Balancing-Tree: 4750
+Insert time:	38.221915s
+Search time:	0.000000s
+Self-Balancing-Tree: 5000
+Insert time:	7.895395s
+Search time:	0.000000s
+Trie-Tree: 250
+Insert time:	15.587555s
+Search time:	0.000000s
+Trie-Tree: 500
+Insert time:	23.376816s
+Search time:	0.000000s
+Trie-Tree: 750
+Insert time:	32.982113s
+Search time:	0.000000s
+Trie-Tree: 1000
+Insert time:	39.021840s
+Search time:	0.000000s
+Trie-Tree: 1250
+Insert time:	42.607647s
+Search time:	0.000000s
+Trie-Tree: 1500
+Insert time:	52.649652s
+Search time:	0.000000s
+Trie-Tree: 1750
+Insert time:	62.725207s
+Search time:	0.000000s
+Trie-Tree: 2000
+Insert time:	75.440847s
+Search time:	0.000000s
+Trie-Tree: 2250
+Insert time:	150.223441s
+Search time:	0.015625s
+Trie-Tree: 2500
+Insert time:	218.665352s
+Search time:	0.000000s
+Trie-Tree: 2750
+Insert time:	213.424192s
+Search time:	0.015753s
+Trie-Tree: 3000
+Insert time:	150.679729s
+Search time:	0.000000s
+Trie-Tree: 3250
+Insert time:	667.689420s
+Search time:	0.031286s
+Trie-Tree: 3500
+Insert time:	1087.228234s
+Search time:	0.026613s
+Trie-Tree: 3750
+Insert time:	3345.654274s
+Search time:	0.026613s
+Trie-Tree: 4000
+Insert time:	2653.725676s
+Search time:	0.047016s
+Trie-Tree: 4250
+Insert time:	3287.260449s
+Search time:	0.031333s
+Trie-Tree: 4500
+Insert time:	32.106187s
+Search time:	0.000000s
+Trie-Tree: 1000
+Insert time:	63.156191s
+Search time:	0.000000s
+Trie-Tree: 2000
+Insert time:	274.168854s
+Search time:	0.006180s
+Trie-Tree: 3000
+Insert time:	3585.483432s
+Search time:	0.031250s
+Trie-Tree: 4000
+Insert time:	6628.304727s
+Search time:	0.038204s
+Trie-Tree: 5000
