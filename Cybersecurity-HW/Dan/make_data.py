@@ -5,13 +5,11 @@ import sys
 def main():
     sample_size = 0
     size_factor = 0
-    hash_function = 0
     try:
         sample_size = int(sys.argv[1]) 
         size_factor = int(sys.argv[2])
-        hash_function = int(sys.argv[3])
     except Exception:
-        print('Usage: python make_data.py <sample_size>, <size_factor>, <hash_function>\nExpected int in command-line arguements.')
+        print('Usage: python make_data.py <sample_size>, <size_factor>\nExpected int in command-line arguements.')
         quit()
 
     symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
@@ -35,7 +33,10 @@ def main():
         if length>len(words): length = len(words)
         clear_text_sd = words[random.randint(i,length)] + symbols[random.randint(0,len(symbols)-1)] + digits[random.randint(0,len(digits)-1)]
         clear_text_ds = words[random.randint(i,length)] + digits[random.randint(0,len(digits)-1)] + symbols[random.randint(0,len(symbols)-1)] 
-        password_file.write(encrypt_string(clear_text_sd,hash_function)+'\n'+encrypt_string(clear_text_ds,hash_function)+'\n')
+        password_file.write(encrypt_string(clear_text_sd,32)+'\n'+encrypt_string(clear_text_ds,40)+'\n')
+        clear_text_sd = words[random.randint(i,length)] + symbols[random.randint(0,len(symbols)-1)] + digits[random.randint(0,len(digits)-1)]
+        clear_text_ds = words[random.randint(i,length)] + digits[random.randint(0,len(digits)-1)] + symbols[random.randint(0,len(symbols)-1)] 
+        password_file.write(encrypt_string(clear_text_sd,56)+'\n'+encrypt_string(clear_text_ds,64)+'\n')
         #print(clear_text_sd)
         #print(clear_text_ds)
 
@@ -52,8 +53,6 @@ def encrypt_string(password, hash_function):
         return str(hashlib.sha224(password.encode()).hexdigest())
     elif hash_function == 64:
         return str(hashlib.sha256(password.encode()).hexdigest())
-    elif hash_function == 96:
-        return str(hashlib.sha384(password.encode()).hexdigest())
     return ''
 
 main()

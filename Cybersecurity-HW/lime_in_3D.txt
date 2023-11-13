@@ -1,0 +1,144 @@
+Insert time:	1.102689 32
+Insert time:	0.556592 40
+Insert time:	1.796313 56
+Insert time:	2.560954 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 100
+Insert time:	1.871334 32
+Insert time:	2.535923 40
+Insert time:	4.012186 56
+Insert time:	3.933710 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 200
+Insert time:	2.659965 32
+Insert time:	3.166534 40
+Insert time:	6.461615 56
+Insert time:	6.843704 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 300
+Insert time:	3.157541 32
+Insert time:	6.224557 40
+Insert time:	8.414974 56
+Insert time:	7.383814 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 400
+Insert time:	7.594313 32
+Insert time:	4.276236 40
+Insert time:	7.019736 56
+Insert time:	12.987273 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 500
+Insert time:	5.842065 32
+Insert time:	7.406296 40
+Insert time:	12.326086 56
+Insert time:	11.137424 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 600
+Insert time:	6.168089 32
+Insert time:	4.950866 40
+Insert time:	12.905246 56
+Insert time:	19.463887 64
+Search time:	0.002000 32
+Search time:	0.000000 40
+Search time:	0.002500 56
+Search time:	0.000000 64
+Trie-Tree: 700
+Insert time:	10.849923 32
+Insert time:	10.269797 40
+Insert time:	12.017566 56
+Insert time:	14.188955 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 800
+Insert time:	8.600533 32
+Insert time:	18.294223 40
+Insert time:	19.447870 56
+Insert time:	9.699664 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 900
+Insert time:	17.367045 32
+Insert time:	12.548127 40
+Insert time:	11.669515 56
+Insert time:	18.510290 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 1000
+Insert time:	11.288945 32
+Insert time:	13.027301 40
+Insert time:	18.856771 56
+Insert time:	25.306886 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 1100
+Insert time:	10.893882 32
+Insert time:	11.371948 40
+Insert time:	24.851827 56
+Insert time:	29.356156 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 1200
+Insert time:	13.785953 32
+Insert time:	12.074075 40
+Insert time:	23.368033 56
+Insert time:	28.949063 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 1300
+Insert time:	18.824736 32
+Insert time:	19.247345 40
+Insert time:	25.844033 56
+Insert time:	26.114555 64
+Search time:	0.002001 32
+Search time:	0.000000 40
+Search time:	0.002501 56
+Search time:	0.000000 64
+Trie-Tree: 1400
+Insert time:	21.280219 32
+Insert time:	18.977304 40
+Insert time:	23.766130 56
+Insert time:	32.715714 64
+Search time:	0.001000 32
+Search time:	0.000000 40
+Search time:	0.001500 56
+Search time:	0.000000 64
+Trie-Tree: 1500
+Insert time:	29.723687 32
+Insert time:	21.253729 40
+Insert time:	15.988780 56
+Insert time:	31.115405 64
+Search time:	0.000000 32
+Search time:	0.000000 40
+Search time:	0.000000 56
+Search time:	0.000000 64
+Trie-Tree: 1600

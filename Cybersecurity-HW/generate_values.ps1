@@ -1,5 +1,5 @@
 $size = 0
-$data_size = 20
+$data_size = 40
 $size_increment = 100
 #for ($i=1; $i -le $data_size; $i++) 
 #{
@@ -22,44 +22,7 @@ $size = 0
 for ($i=1; $i -le $data_size; $i++) 
 {
     $size = $size + $size_increment
-    python Dan\make_data.py $size 5 32
-    python Dan\decrypt.py 32
-    "{0} {1}" -f "Character-length:", 32
-    "{0} {1}" -f "Trie-Tree:",$((Get-Content words.txt).Length)
-}
-
-for ($i=1; $i -le $data_size; $i++) 
-{
-    $size = $size + $size_increment
-    python Dan\make_data.py $size 5 40
-    python Dan\decrypt.py 40
-    "{0} {1}" -f "Character-length:", 40
-    "{0} {1}" -f "Trie-Tree:",$((Get-Content words.txt).Length)
-}
-
-for ($i=1; $i -le $data_size; $i++) 
-{
-    $size = $size + $size_increment
-    python Dan\make_data.py $size 5 56
-    python Dan\decrypt.py 56
-    "{0} {1}" -f "Character-length:", 56
-    "{0} {1}" -f "Trie-Tree:",$((Get-Content words.txt).Length)
-}
-
-for ($i=1; $i -le $data_size; $i++) 
-{
-    $size = $size + $size_increment
-    python Dan\make_data.py $size 5 64
-    python Dan\decrypt.py 64
-    "{0} {1}" -f "Character-length:", 64
-    "{0} {1}" -f "Trie-Tree:",$((Get-Content words.txt).Length)
-}
-
-for ($i=1; $i -le $data_size; $i++) 
-{
-    $size = $size + $size_increment
-    python Dan\make_data.py $size 5 96
-    python Dan\decrypt.py 96
-    "{0} {1}" -f "Character-length:", 96
+    python Dan\make_data.py $size 5
+    python Dan\decrypt.py
     "{0} {1}" -f "Trie-Tree:",$((Get-Content words.txt).Length)
 }

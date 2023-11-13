@@ -20,7 +20,6 @@ def hash_it(hash_function, password):
 def symbols_digits(word_list,hash_list,digits,symbols):
 	global t
 	t0 = time.time()
-	
 	tree = Trie()
 	for word in word_list:
 		word = word.strip()
@@ -28,9 +27,14 @@ def symbols_digits(word_list,hash_list,digits,symbols):
 			for j in range(0,len(digits)):
 				#for every word read from word_list, convert to hash using sha256 and store to hashed_word
 				password = '%s%s%s'%(word,symbols[i],digits[j])
-				hashed_word = hash_it(int(sys.argv[1]), password)
+				hashed_word = hash_it(int(32), password)
+				t0 = time.time()
 				tree.insert(hashed_word, password)
-	t[0] = t[0]+time.time()-t0
+				t[0][len(hashed_word)] = t[0][len(hashed_word)]+time.time() - t0
+				hashed_word = hash_it(int(56), password)
+				t0 = time.time()
+				tree.insert(hashed_word, password)
+				t[0][len(hashed_word)] = t[0][len(hashed_word)]+time.time() - t0
 
 	compare_hashes(tree, hash_list)
 
@@ -44,9 +48,14 @@ def digits_symbols(word_list,hash_list,digits,symbols):
 			for j in range(0,len(digits)):
 				#for every word read from word_list, convert to hash using sha256 and store to hashed_word
 				password = '%s%s%s'%(word,symbols[i],digits[j])
-				hashed_word = hash_it(int(sys.argv[1]), password)
+				hashed_word = hash_it(int(40), password)
+				t0 = time.time()
 				tree.insert(hashed_word, password)
-	t[0] = t[0]+time.time()-t0
+				t[0][len(hashed_word)] = t[0][len(hashed_word)]+time.time() - t0
+				hashed_word = hash_it(int(64), password)
+				t0 = time.time()
+				tree.insert(hashed_word, password)
+				t[0][len(hashed_word)] = t[0][len(hashed_word)]+time.time() - t0
 	compare_hashes(tree, hash_list)
 
 def compare_hashes(tree, hash_list):
@@ -59,7 +68,7 @@ def compare_hashes(tree, hash_list):
 		# if one of the 100 hashes is present in the dictionary, write to passwords1.txt along with the original password
 		if hashes_word != None:
 			decrypted_passwords[hashes_word[0]] = hashes_word[1]
-	t[1] = t[1]+time.time()-t0
+			t[1][len(hashes_word[0])] = t[1][len(hashes_word[0])]+time.time() - t0
 
 	for i in decrypted_passwords:
 		if i in hash_list:
@@ -67,8 +76,7 @@ def compare_hashes(tree, hash_list):
 
 				
 if __name__=='__main__':
-	t = [0, 0, 0]
-	t0 = time.time()
+	t = [{32:0,40:0,56:0,64:0},{32:0,40:0,56:0,64:0}]
 	decrypted_passwords = {}
 
 	symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '|', ':', ';', '[', ']', '?', '>']
@@ -98,7 +106,11 @@ for i in decrypted_passwords:
 write_file.close()
 
 #print('done')
-t[2] = time.time() - t0
-print('Insert time:\t%fs'%(t[0]))
-print('Search time:\t%fs'%(t[1]))
-#print('Total time:\t%fs'%(t[2]))
+print('Insert time:\t%f %d'%(t[0][32],32))
+print('Insert time:\t%f %d'%(t[0][40],40))
+print('Insert time:\t%f %d'%(t[0][56],56))
+print('Insert time:\t%f %d'%(t[0][64],64))
+print('Search time:\t%f %d'%(t[1][32],32))
+print('Search time:\t%f %d'%(t[1][40],40))
+print('Search time:\t%f %d'%(t[1][56],56))
+print('Search time:\t%f %d'%(t[1][64],64))
