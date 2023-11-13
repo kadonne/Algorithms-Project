@@ -44,7 +44,7 @@ ax = plt.axes(projection="3d")
 ax.plot3D(x_data,y_data,z_data)
 plt.title("Trie Tree Running Time")
 plt.xlabel("Data Size (n)")
-plt.ylabel("Running Time O(n)")
+plt.ylabel("Running Time O(n) seconds")
 plt.clabel("Hash String length")
 plt.legend()
 
