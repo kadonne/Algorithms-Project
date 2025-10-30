@@ -8,7 +8,7 @@ This project implements and compares three different data structures for crackin
 
 ## Team Members
 
-* **Ammar**: Dictionary implementation (author `decrypt.py`, `3D_parse.py`, and 'make_data.py')
+* **Ammar**: Dictionary implementation (author `decrypt.py`, `3D_parse.py`, and `make_data.py`)
 * **Dan**: Trie Tree data structure implementation
 * **Kailey**: Self-Balancing Tree implementation
 
