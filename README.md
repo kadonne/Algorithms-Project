@@ -126,14 +126,6 @@ python 3D_parse.py
 * **Search time**: Time to find matches using binary search
 * **Sort time**: Time to sort the hash dictionary
 
-### Binary Search Implementation
-
-```python
-def binary_search(arr, low, high, x):
-    # Recursive binary search on sorted hash array
-    # Returns index if found, -1 otherwise
-```
-
 ## Performance Comparison
 
 The project measures three key metrics across all data structures:
