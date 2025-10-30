@@ -16,7 +16,7 @@ This project implements and compares three different data structures for crackin
 
 ```
 Algorithms-Project/
-├── decrypt.py                  # Dictionary-based password cracker
+├── decrypt.py                 # Dictionary-based password cracker
 ├── make_data.py               # Test data generator
 ├── 3D_parse.py                # Results visualization script
 ├── words-original.txt         # Original wordlist (140,000+ English words)
