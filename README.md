@@ -136,7 +136,7 @@ The project measures three key metrics across all data structures:
 | **Search** | Time to locate target hashes in the structure |
 | **Sorting** | Time to organize data (where applicable) |
 
-Results are documented and visualized in 3D graphs showing the relationship between data structure choice, operation type, and performance.
+Results are documented and visualized in 2D and 3D graphs showing the relationship between data structure choice, operation type, and performance.
 
 ## Security Note
 
